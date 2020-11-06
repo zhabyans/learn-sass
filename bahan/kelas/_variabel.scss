@@ -1,0 +1,33 @@
+// kumpulan variabel yang berisi properti atau beberapa properti (extend)
+
+// ini adalah variabel yang berisi 1 properti
+$font-bersambung : 'Lobster', cursive;
+$font-gede : 34px;
+$font-kecil : 16px;
+$warna-fav : green;
+$warna-lembut : #ccc;
+$warna-lama : red;
+$lebar-main: 960px;
+$tengah-x: 0 auto;
+
+// ini adalah extend menggunakan %, cara panggil dengan @extend pada _layout.scss
+%link-baru{
+    color: $warna-fav;
+    font-size: $font-gede;
+}
+
+// ini adalah extend menggunakan titik, cara panggil dengan memanggil class pada _layout.scss
+.link-lama {
+    font-size: $font-kecil;
+    color: $warna-lama;
+}
+
+// ini adalah mixin berguna seperti function yang menerima parameter, cara panggil dengan @include pada _layout.scss
+@mixin border-rad($radius) {
+    border-radius: $radius;
+    -ms-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -o-border-radius: $radius;
+
+}

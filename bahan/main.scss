@@ -1,0 +1,9 @@
+// main.scss menjadi parent yang nantinya akan di export ke style.css
+
+@import 'kelas/variabel';
+@import 'kelas/layout';
+
+// ==============TERMINAL====================
+// kalau mau minify sass --style compressed .\bahan\main.scss style.css
+// compile aja sass .\bahan\main.scss style.css
+// compile + autosave sass .\bahan\main.scss style.css

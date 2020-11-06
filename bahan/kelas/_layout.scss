@@ -1,0 +1,63 @@
+// layout untuk menerapkan styling
+
+#container{
+    width: $lebar-main;
+    margin: $tengah-x;
+}
+
+// sscs bisa operasi matematika
+#main{
+    float: left;
+    width: 600px / $lebar-main * 100%;
+}
+
+#sidebar{
+    float: left;
+    width: 360px / $lebar-main * 100%;
+}
+
+h1{
+    font-family: $font-bersambung;
+    font-size: $font-gede;
+    color: $warna-fav;
+}
+
+p{
+    color:$warna-lembut;
+}
+
+// ini nesting, hasilnya kayak ul > li > a
+// ada pseudo class juga (hover)
+ul{
+    li{
+        a{
+            @extend %link-baru;
+            &:hover{
+                color:black;
+            }
+        }
+    }
+}
+
+// cara menggunakan mixin dengan @include
+.button{
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    @include border-rad(10px);
+}
+
+.suka{
+    background-color: lightskyblue;
+}
+
+.biasa{
+    background-color: lightgreen;
+}
+
+.marah{
+    background-color: lightcoral;
+}
